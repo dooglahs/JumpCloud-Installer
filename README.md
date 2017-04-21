@@ -1,6 +1,8 @@
 # JumpCloud-Installer
 I made this script to help with the installation of the JumpCloud (JC) client on macOSX and to make API calls to the JumpCloud console to push and pull data.
 
+NOTE: This utilizes the old JumpCloud API version 1.0. There is a new API; I will be creating a new project to utilize v2.0.
+
 # Specifically...
 ## jumplcloud-install.sh follows this workflow:
 
