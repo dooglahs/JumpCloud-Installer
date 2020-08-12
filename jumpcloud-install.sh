@@ -138,6 +138,6 @@ echo "The JumpCloud user, ${USER_FULLNAME}, can log into this computer."
 sleep 3
 
 # Make the user admin (sudo user) on the machine
-curl -d "{ \"${SYSTEM_KEY}\": { \"_id\": \"sudoerID\", \"sudoEnabled\": true, \"sudoWithoutPassword\": false }}" -X 'PUT' -H 'Content-Type: application/json' -H 'Accept: application/json' -H "x-api-key: e0b8f049e90c3d24f6e46462d0d690437fab7d76" "https://console.jumpcloud.com/api/systemusers/${USER_KEY}/systems/sudoers"
+curl -d "{ \"${SYSTEM_KEY}\": { \"_id\": \"sudoerID\", \"sudoEnabled\": true, \"sudoWithoutPassword\": false }}" -X 'PUT' -H 'Content-Type: application/json' -H 'Accept: application/json' -H "x-api-key: ${API_KEY}" "https://console.jumpcloud.com/api/systemusers/${USER_KEY}/systems/sudoers"
 echo "The JumpCloud user, ${USER_FULLNAME}, is now an admin user on this computer."
 sleep 3
