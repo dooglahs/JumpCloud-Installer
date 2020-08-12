@@ -57,7 +57,7 @@ if [[ ${USER_FOUND} == 1 ]]; then
 	echo "${USER_FULLNAME} already exists in JumpCloud."
 else
 	echo "We will now add ${USER_FULLNAME} to JumpCloud."
-	curl -d "{\"email\" : \"${USER_SHORTNAME}${EMAIL_DOMAIN}\", \"username\" : \"${USER_SHORTNAME}\" }" -X 'POST' -H 'Content-Type: application/json' -H 'Accept: application/json' -H "x-api-key: [YOUR_API_KEY_HERE]" "https://console.jumpcloud.com/api/systemusers"
+	curl -d "{\"email\" : \"${USER_SHORTNAME}${EMAIL_DOMAIN}\", \"username\" : \"${USER_SHORTNAME}\" }" -X 'POST' -H 'Content-Type: application/json' -H 'Accept: application/json' -H "x-api-key: ${API_KEY}" "https://console.jumpcloud.com/api/systemusers"
 	echo "${USER_FULLNAME} will have an email requesting they set up their password."
 fi
 echo ""
